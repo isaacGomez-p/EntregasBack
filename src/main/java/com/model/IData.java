@@ -76,7 +76,7 @@ public class IData implements Serializable {
     @Column(name="ENTREGA_FEC" , length = 30)
     private String Entrega_Fec;
 
-    @Column(name="FOTO" , length = Integer.MAX_VALUE)
+    @Column(name="FOTO" , length = 10485760)
     private String Foto;
 
     @Column(name="LAT")
