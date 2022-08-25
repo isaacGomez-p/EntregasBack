@@ -3,6 +3,7 @@ package com.controller;
 import com.Service.DataService;
 import com.Service.UserService;
 import com.model.IData;
+import com.model.RequestDTO;
 import com.model.Response;
 import com.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +23,9 @@ public class DataController {
     @Autowired
     UserService userService;
 
-    @GetMapping(value = "/getData")
-    public Response getData(){
-        return this.dataService.getData();
+    @PostMapping(value = "/getData")
+    public Response getData(@RequestBody RequestDTO requestDTO){
+        return this.dataService.getData(requestDTO);
     }
 
     @PostMapping(value = "/modificar")

@@ -3,6 +3,7 @@ package com.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "IDATA")
@@ -14,79 +15,88 @@ public class IData implements Serializable {
     private Integer Id;
 
     @Column(name="CAMPANIA")
-    private Integer Campania;
+    private Integer campania;
 
     @Column(name="DESPACHO")
-    private Integer Despacho;
+    private Integer despacho;
 
     @Column(name="MANIFIESTO")
-    private Integer Manifiesto;
+    private Integer manifiesto;
 
     @Column(name="PEDIDO" , length = 20, unique = true)
-    private String Pedido;
+    private String pedido;
 
     @Column(name="DESTINO_FINAL" , length = 200)
-    private String DestinoFinal;
+    private String destinoFinal;
 
     @Column(name="DEPTO" , length = 40)
-    private String Depto;
+    private String depto;
 
     @Column(name="CIUDAD" , length = 40)
-    private String Ciudad;
+    private String ciudad;
 
     @Column(name="DIRECCION" , length = 100)
-    private String Direccion;
+    private String direccion;
 
     @Column(name="TEL" , length = 40)
-    private String Tel;
+    private String tel;
 
     @Column(name="ASIGNADO")
-    private Integer Asignado;
+    private Integer asignado;
 
     @Column(name="CONDUCTOR" , length = 50)
-    private String Conductor;
+    private String conductor;
 
     @Column(name="COND_CELULAR")
-    private Integer Cond_Celular;
+    private Integer cond_Celular;
 
     @Column(name="VEHI_PLACA" , length = 10)
-    private String Vehi_Placa;
+    private String vehi_Placa;
 
     @Column(name="VEHI_TIPO" , length = 100)
-    private String Vehi_Tipo;
+    private String vehi_Tipo;
 
     @Column(name="VEHI_COLOR" , length = 20)
-    private String Vehi_Color;
+    private String vehi_Color;
 
     @Column(name="RELACION_ID")
-    private Integer Relacion_Id;
+    private Integer relacion_Id;
 
     @Column(name="RELACION_FEC")
-    private String Relacion_Fec;
+    private String relacion_Fec;
 
     @Column(name="PRE_RUTA")
-    private Integer PreRuta;
+    private Integer preRuta;
 
     @Column(name="ESTADO")
-    private Integer Estado;
+    private Integer estado;
 
     @Column(name="CAUSAL_ID")
-    private Integer Causal_Id;
+    private Integer causal_Id;
 
     @Column(name="ENTREGA_FEC" , length = 200)
-    private String Entrega_Fec;
+    private String entrega_Fec;
 
     @Column(name="FOTO" , length = 10485760)
-    private String Foto;
+    private String foto;
 
     @Column(name="LAT")
-    private Double Lat;
+    private Double lat;
 
     @Column(name="LNG")
-    private Double Lng;
+    private Double lng;
 
     @Column(name="PREC")
-    private Long Prec;
+    private Long prec;
+
+    @Column(name="LAT_NOVEDAD")
+    private Double latNovedad;
+
+    @Column(name="LNG_NOVEDAD")
+    private Double lngNovedad;
+
+    @Column(name="FEC_SINCRONIZA")
+    private Date fecSincroniza;
 
     public Integer getId() {
         return Id;
@@ -97,202 +107,226 @@ public class IData implements Serializable {
     }
 
     public Integer getCampania() {
-        return Campania;
+        return campania;
     }
 
     public void setCampania(Integer campania) {
-        Campania = campania;
+        this.campania = campania;
     }
 
     public Integer getDespacho() {
-        return Despacho;
+        return despacho;
     }
 
     public void setDespacho(Integer despacho) {
-        Despacho = despacho;
+        this.despacho = despacho;
     }
 
     public Integer getManifiesto() {
-        return Manifiesto;
+        return manifiesto;
     }
 
     public void setManifiesto(Integer manifiesto) {
-        Manifiesto = manifiesto;
+        this.manifiesto = manifiesto;
     }
 
     public String getPedido() {
-        return Pedido;
+        return pedido;
     }
 
     public void setPedido(String pedido) {
-        Pedido = pedido;
+        this.pedido = pedido;
     }
 
     public String getDestinoFinal() {
-        return DestinoFinal;
+        return destinoFinal;
     }
 
     public void setDestinoFinal(String destinoFinal) {
-        DestinoFinal = destinoFinal;
+        this.destinoFinal = destinoFinal;
     }
 
     public String getDepto() {
-        return Depto;
+        return depto;
     }
 
     public void setDepto(String depto) {
-        Depto = depto;
+        this.depto = depto;
     }
 
     public String getCiudad() {
-        return Ciudad;
+        return ciudad;
     }
 
     public void setCiudad(String ciudad) {
-        Ciudad = ciudad;
+        this.ciudad = ciudad;
     }
 
     public String getDireccion() {
-        return Direccion;
+        return direccion;
     }
 
     public void setDireccion(String direccion) {
-        Direccion = direccion;
+        this.direccion = direccion;
     }
 
     public String getTel() {
-        return Tel;
+        return tel;
     }
 
     public void setTel(String tel) {
-        Tel = tel;
+        this.tel = tel;
     }
 
     public Integer getAsignado() {
-        return Asignado;
+        return asignado;
     }
 
     public void setAsignado(Integer asignado) {
-        Asignado = asignado;
+        this.asignado = asignado;
     }
 
     public String getConductor() {
-        return Conductor;
+        return conductor;
     }
 
     public void setConductor(String conductor) {
-        Conductor = conductor;
+        this.conductor = conductor;
     }
 
     public Integer getCond_Celular() {
-        return Cond_Celular;
+        return cond_Celular;
     }
 
     public void setCond_Celular(Integer cond_Celular) {
-        Cond_Celular = cond_Celular;
+        this.cond_Celular = cond_Celular;
     }
 
     public String getVehi_Placa() {
-        return Vehi_Placa;
+        return vehi_Placa;
     }
 
     public void setVehi_Placa(String vehi_Placa) {
-        Vehi_Placa = vehi_Placa;
+        this.vehi_Placa = vehi_Placa;
     }
 
     public String getVehi_Tipo() {
-        return Vehi_Tipo;
+        return vehi_Tipo;
     }
 
     public void setVehi_Tipo(String vehi_Tipo) {
-        Vehi_Tipo = vehi_Tipo;
+        this.vehi_Tipo = vehi_Tipo;
     }
 
     public String getVehi_Color() {
-        return Vehi_Color;
+        return vehi_Color;
     }
 
     public void setVehi_Color(String vehi_Color) {
-        Vehi_Color = vehi_Color;
+        this.vehi_Color = vehi_Color;
     }
 
     public Integer getRelacion_Id() {
-        return Relacion_Id;
+        return relacion_Id;
     }
 
     public void setRelacion_Id(Integer relacion_Id) {
-        Relacion_Id = relacion_Id;
+        this.relacion_Id = relacion_Id;
     }
 
     public String getRelacion_Fec() {
-        return Relacion_Fec;
+        return relacion_Fec;
     }
 
     public void setRelacion_Fec(String relacion_Fec) {
-        Relacion_Fec = relacion_Fec;
+        this.relacion_Fec = relacion_Fec;
     }
 
     public Integer getPreRuta() {
-        return PreRuta;
+        return preRuta;
     }
 
     public void setPreRuta(Integer preRuta) {
-        PreRuta = preRuta;
+        this.preRuta = preRuta;
     }
 
     public Integer getEstado() {
-        return Estado;
+        return estado;
     }
 
     public void setEstado(Integer estado) {
-        Estado = estado;
+        this.estado = estado;
     }
 
     public Integer getCausal_Id() {
-        return Causal_Id;
+        return causal_Id;
     }
 
     public void setCausal_Id(Integer causal_Id) {
-        Causal_Id = causal_Id;
+        this.causal_Id = causal_Id;
     }
 
     public String getEntrega_Fec() {
-        return Entrega_Fec;
+        return entrega_Fec;
     }
 
     public void setEntrega_Fec(String entrega_Fec) {
-        Entrega_Fec = entrega_Fec;
+        this.entrega_Fec = entrega_Fec;
     }
 
     public String getFoto() {
-        return Foto;
+        return foto;
     }
 
     public void setFoto(String foto) {
-        Foto = foto;
+        this.foto = foto;
     }
 
     public Double getLat() {
-        return Lat;
+        return lat;
     }
 
     public void setLat(Double lat) {
-        Lat = lat;
+        this.lat = lat;
     }
 
     public Double getLng() {
-        return Lng;
+        return lng;
     }
 
     public void setLng(Double lng) {
-        Lng = lng;
+        this.lng = lng;
     }
 
     public Long getPrec() {
-        return Prec;
+        return prec;
     }
 
     public void setPrec(Long prec) {
-        Prec = prec;
+        this.prec = prec;
+    }
+
+    public Double getLatNovedad() {
+        return latNovedad;
+    }
+
+    public void setLatNovedad(Double latNovedad) {
+        this.latNovedad = latNovedad;
+    }
+
+    public Double getLngNovedad() {
+        return lngNovedad;
+    }
+
+    public void setLngNovedad(Double lngNovedad) {
+        this.lngNovedad = lngNovedad;
+    }
+
+    public Date getFecSincroniza() {
+        return fecSincroniza;
+    }
+
+    public void setFecSincroniza(Date fecSincroniza) {
+        this.fecSincroniza = fecSincroniza;
     }
 }
