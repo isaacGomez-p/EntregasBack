@@ -11,7 +11,7 @@ public class IData implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="ID")
-    private String Id;
+    private Integer Id;
 
     @Column(name="CAMPANIA")
     private Integer Campania;
@@ -25,7 +25,7 @@ public class IData implements Serializable {
     @Column(name="PEDIDO" , length = 20, unique = true)
     private String Pedido;
 
-    @Column(name="DESTINO_FINAL" , length = 100)
+    @Column(name="DESTINO_FINAL" , length = 200)
     private String DestinoFinal;
 
     @Column(name="DEPTO" , length = 40)
@@ -34,13 +34,13 @@ public class IData implements Serializable {
     @Column(name="CIUDAD" , length = 40)
     private String Ciudad;
 
-    @Column(name="DIRECCION" , length = 40)
+    @Column(name="DIRECCION" , length = 100)
     private String Direccion;
 
     @Column(name="TEL" , length = 40)
     private String Tel;
 
-    @Column(name="ASIGNADO" , length = 40)
+    @Column(name="ASIGNADO")
     private Integer Asignado;
 
     @Column(name="CONDUCTOR" , length = 50)
@@ -52,7 +52,7 @@ public class IData implements Serializable {
     @Column(name="VEHI_PLACA" , length = 10)
     private String Vehi_Placa;
 
-    @Column(name="VEHI_TIPO" , length = 20)
+    @Column(name="VEHI_TIPO" , length = 100)
     private String Vehi_Tipo;
 
     @Column(name="VEHI_COLOR" , length = 20)
@@ -61,7 +61,7 @@ public class IData implements Serializable {
     @Column(name="RELACION_ID")
     private Integer Relacion_Id;
 
-    @Column(name="RELACION_FEC" , length = 20)
+    @Column(name="RELACION_FEC")
     private String Relacion_Fec;
 
     @Column(name="PRE_RUTA")
@@ -73,26 +73,26 @@ public class IData implements Serializable {
     @Column(name="CAUSAL_ID")
     private Integer Causal_Id;
 
-    @Column(name="ENTREGA_FEC" , length = 30)
+    @Column(name="ENTREGA_FEC" , length = 200)
     private String Entrega_Fec;
 
     @Column(name="FOTO" , length = 10485760)
     private String Foto;
 
     @Column(name="LAT")
-    private Long Lat;
+    private Double Lat;
 
     @Column(name="LNG")
-    private Long Lng;
+    private Double Lng;
 
     @Column(name="PREC")
     private Long Prec;
 
-    public String getId() {
+    public Integer getId() {
         return Id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         Id = id;
     }
 
@@ -272,19 +272,19 @@ public class IData implements Serializable {
         Foto = foto;
     }
 
-    public Long getLat() {
+    public Double getLat() {
         return Lat;
     }
 
-    public void setLat(Long lat) {
+    public void setLat(Double lat) {
         Lat = lat;
     }
 
-    public Long getLng() {
+    public Double getLng() {
         return Lng;
     }
 
-    public void setLng(Long lng) {
+    public void setLng(Double lng) {
         Lng = lng;
     }
 

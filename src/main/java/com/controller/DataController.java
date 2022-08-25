@@ -28,16 +28,8 @@ public class DataController {
     }
 
     @PostMapping(value = "/modificar")
-    public Response modificar(@RequestBody IData iData){
-        return this.dataService.modificar(iData);
-    }
-
-    @PostMapping(value = "/json")
-    public Response json(@RequestBody List<IData> iDataList) {
-        iDataList.forEach(iData -> {
-            this.dataService.modificar(iData);
-        });
-        return new Response(HttpStatus.MULTI_STATUS, "DDDD");
+    public Response modificar(@RequestBody List<IData> listaIData){
+        return this.dataService.modificar(listaIData);
     }
 
     @PostMapping(value = "/login")
